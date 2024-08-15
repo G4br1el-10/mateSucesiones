@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesiones Matemáticas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sucesiones Matemáticas</h1>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="show-pictograph"> Sucesiones Pictográficas</label>
+                <label><input type="checkbox" id="show-arithmetic"> Sucesiones Aritméticas</label>
+                <label><input type="checkbox" id="show-numeric"> Sucesiones Numéricas</label>
+            </div>
+            <div id="pictograph" class="result pictograph">
+                <h2>Sucesiones Pictográficas</h2>
+                <form id="pictograph-form">
+                    <label for="shape">Figura:</label>
+                    <select id="shape" required>
+                        <option value="circle">Círculo</option>
+                        <option value="square">Cuadrado</option>
+                        <option value="triangle">Triángulo</option>
+                        <option value="rhombus">Rombo</option>
+                    </select>
+                    <label for="quantity">Cantidad:</label>
+                    <input type="number" id="quantity" value="1" required>
+                    <button type="submit">Generar</button>
+                </form>
+                <div id="pictograph-content"></div>
+            </div>
+            <div id="arithmetic" class="result arithmetic">
+                <h2>Sucesiones Aritméticas</h2>
+                <form id="arithmetic-form">
+                    <label for="start">Inicio:</label>
+                    <input type="number" id="start" value="1" required>
+                    <label for="difference">Diferencia:</label>
+                    <input type="number" id="difference" value="1" required>
+                    <label for="terms">Número de términos:</label>
+                    <input type="number" id="terms" value="10" required>
+                    <button type="submit">Generar</button>
+                </form>
+                <div id="arithmetic-content"></div>
+            </div>
+            <div id="numeric" class="result numeric">
+                <h2>Sucesiones Numéricas</h2>
+                <form id="numeric-form">
+                    <label for="terms">Número de términos:</label>
+                    <input type="number" id="terms" value="10" required>
+                    <label for="type">Tipo de sucesión:</label>
+                    <select id="type" required>
+                        <option value="squares">Cuadrados</option>
+                        <option value="fibonacci">Fibonacci</option>
+                        <option value="factorial">Factorial</option>
+                    </select>
+                    <button type="submit">Generar</button>
+                </form>
+                <div id="numeric-content"></div>
+                <p id="numeric-explanation"></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
